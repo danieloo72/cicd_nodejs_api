@@ -16,14 +16,14 @@ function createService(repository) {
       return repository.create({ title, done: false });
     },
     async complete(id) {
-      const updated = await repository.complete(Number(id));
+            const updated = await repository.complete(Number(id));
       if (!updated) {
         const error = new Error('Tarea no encontrada');
         error.status = 404;
-        throw error;
-      }
-      return updated;
+          throw error;
+        }
+  return updated;
     },
   };
 }
-module.exports = { validateTitle, createService };
+module .exports = {  validateTitle, createService };
