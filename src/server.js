@@ -16,6 +16,6 @@ async function main() {
   process.on('SIGINT', shutdown);
 }
 main().catch((err) => {
-  console.error(err);
+  console.error(err); // Salta un error por consola
   process.exit(1);
 });
